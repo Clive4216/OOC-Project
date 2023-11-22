@@ -77,23 +77,17 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 col-xl-7">
                 <form id="foodLogForm" method="post" action="foodlog">
-                    <!-- Food Type input-->
+                    <!-- Food Name input-->
                     <div class="form-floating mb-3">
-                        <input class="form-control" id="foodType" type="text"
-                               placeholder="Enter type of food..." name="foodType" required />
-                        <label for="foodType">Type of Food</label>
+                        <input class="form-control" id="foodName" type="text"
+                               placeholder="Enter name of food..." name="foodName" required />
+                        <label for="foodType">Name of Food</label>
                     </div>
                     <!-- Quantity input-->
                     <div class="form-floating mb-3">
                         <input class="form-control" id="quantity" type="number"
                                placeholder="Enter quantity..." name="quantity" required />
                         <label for="quantity">Quantity</label>
-                    </div>
-                    <!-- Meal Time input-->
-                    <div class="form-floating mb-3">
-                        <input class="form-control" id="mealTime" type="text"
-                               placeholder="Enter meal time..." name="mealTime" required />
-                        <label for="mealTime">Meal Time</label>
                     </div>
                     <!-- Submit Button-->
                     <button class="btn btn-primary btn-xl" type="submit">Log Food</button>
@@ -102,6 +96,25 @@
         </div>
     </div>
 </section>
+
+<!-- Add this section to display food details -->
+<section class="page-section" id="foodDetails">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Food Details</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+        <!-- Display food details here -->
+        <div class="text-center">
+            <p><%= request.getAttribute("foodDetails") %></p>
+        </div>
+    </div>
+</section>
+
 	
 	<!-- About Section-->
 	<section class="page-section bg-primary text-white mb-0" id="about">
@@ -125,9 +138,8 @@
 					food choices and consumption habits.</p>
 				</div>
 				<div class="col-lg-4 me-auto">
-					<p class="lead">You can create your own custom avatar for the
-						masthead, change the icon in the dividers, and add your email
-						address to the contact form to make it fully functional!</p>
+					<p class="lead">It helps to identify areas of improvement, track progress over time, and provide insights into the environmental, 
+					social, and economic impacts of food production, processing, and distribution.</p>
 				</div>
 			</div>
 			
@@ -240,8 +252,7 @@
 				<div class="divider-custom-line"></div>
 			</div>
 			<!-- Masthead Subheading-->
-			<p class="masthead-subheading font-weight-light mb-0">Java
-				Development - Web Development - Python</p>
+			<p class="masthead-subheading font-weight-light mb-0"></p>
 		</div>
 	</header>
 	
@@ -251,9 +262,9 @@
 			<div class="row">
 				<!-- Footer Location-->
 				<div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Location</h4>
+					<h4 class="text-uppercase mb-4"></h4>
 					<p class="lead mb-0">
-						2215 John Daniel Drive <br /> Clark, MO 65243
+						
 					</p>
 				</div>
 				<!-- Footer Social Icons-->
@@ -268,14 +279,7 @@
 						class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-dribbble"></i></a>
 				</div>
-				<!-- Footer About Text-->
-				<div class="col-lg-4">
-					<h4 class="text-uppercase mb-4">About Freelancer</h4>
-					<p class="lead mb-0">
-						Freelance is a free to use, MIT licensed Bootstrap theme created
-						by <a href="http://startbootstrap.com">Start Bootstrap</a> .
-					</p>
-				</div>
+				
 			</div>
 		</div>
 	</footer>
